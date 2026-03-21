@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Valentina Alfonso | Product Manager</title>
+  <meta name="description" content="Valentina Alfonso — Product Manager at Scalestack. Industrial designer by training. Portfolio showcasing product thinking, design, and case studies." />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -17,7 +18,7 @@
             'sun-50':  '#FFFDF5',
             'sun-100': '#FFF9E8',
             'sun-150': '#FFF3D4',
-            'sun-200': '#FFDC7C',
+            'sun-200': '#FFE4A0',
             'sun-300': '#FBDB8A',
             'sun-400': '#FFDC7C',
             'sun-500': '#E6B635',
@@ -39,7 +40,7 @@
       --sun-50:  #FFFDF5;
       --sun-100: #FFF9E8;
       --sun-150: #FFF3D4;
-      --sun-200: #FFDC7C;
+      --sun-200: #FFE4A0;
       --sun-300: #FBDB8A;
       --sun-400: #FFDC7C;
       --sun-500: #E6B635;
@@ -128,15 +129,15 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      z-index: 2;
-      opacity: 0.35;
-      mix-blend-mode: darken;
-      background-image: url('noise-tile.png');
-      background-size: 512px 512px;
+      z-index: 1;
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
       background-repeat: repeat;
     }
     .grain-light::after {
-      mix-blend-mode: lighten;
+      mix-blend-mode: soft-light;
       opacity: 0.2;
     }
 
@@ -339,12 +340,6 @@
     }
 
     /* ========== MISC ========== */
-    .counter { font-variant-numeric: tabular-nums; }
-    .perspective { perspective: 1000px; }
-    .preserve-3d { transform-style: preserve-3d; }
-    .backface-hidden { backface-visibility: hidden; }
-    .rotate-y-180 { transform: rotateY(180deg); }
-    .mouse-reactive { transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); will-change: transform; }
     .load-hidden { opacity: 0; transform: translateY(30px); }
     .load-nav { opacity: 0; transform: translateY(-20px); }
     @keyframes loadIn { to { opacity: 1; transform: translateY(0); } }
@@ -399,8 +394,6 @@
 
     <!-- 001 HERO -->
     <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden bg-gradient-hero grain">
-      <div class="mouse-reactive absolute top-28 right-16 w-24 h-24 rounded-full border border-sun-400/10 hidden md:block" data-speed="0.03"></div>
-      <div class="mouse-reactive absolute bottom-44 left-24 w-36 h-36 rounded-full border border-sun-400/8 hidden md:block" data-speed="0.04"></div>
 
       <div class="max-w-7xl pt-32 md:pt-24 relative z-10">
         <div class="load-hidden mb-6" style="animation: loadIn 0.7s 0.3s cubic-bezier(0.16,1,0.3,1) forwards">
@@ -434,7 +427,6 @@
 
     <!-- 002 ABOUT -->
     <section class="relative overflow-hidden grain grain-light py-32 md:py-44 px-6 md:px-16 bg-gradient-dark text-sun-100" id="about">
-      <div class="mouse-reactive absolute top-20 right-20 w-28 h-28 rounded-full border border-sun-500/6 hidden md:block" data-speed="0.04"></div>
 
       <div class="max-w-5xl relative z-10">
         <div class="reveal-left mb-12">
@@ -469,7 +461,6 @@
 
     <!-- 003 EXPERIENCE -->
     <section class="relative py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-warm grain" id="experience">
-      <div class="mouse-reactive absolute top-24 right-24 w-32 h-32 rounded-full border border-sun-400/8 hidden md:block" data-speed="0.035"></div>
 
       <div class="max-w-5xl mx-auto relative z-10">
         <div class="reveal-left mb-6">
@@ -563,7 +554,6 @@
 
     <!-- 004 CASE STUDIES -->
     <section class="relative py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-soft grain" id="case-studies">
-      <div class="mouse-reactive absolute top-40 right-10 w-44 h-44 rounded-full border border-sun-400/8 hidden md:block" data-speed="0.03"></div>
 
       <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-6 relative z-10">
         <div class="reveal-up">
@@ -575,25 +565,25 @@
 
       <!-- Card Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10" id="case-grid">
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" onclick="openCase(0)">
+        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" role="button" tabindex="0" onclick="openCase(0)" onkeydown="if(event.key==='Enter')openCase(0)">
           <span class="font-headline text-[10px] text-sun-800/40 tracking-[0.3em] uppercase">01 &middot; tekuoia</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">When the product is the experience, not the content.</h3>
           <p class="text-sun-800/50 font-body text-sm leading-relaxed">Four stakeholders, four definitions of success. The curriculum redesign worked because the stages made sense.</p>
           <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:100ms" onclick="openCase(1)">
+        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:100ms" role="button" tabindex="0" onclick="openCase(1)" onkeydown="if(event.key==='Enter')openCase(1)">
           <span class="font-headline text-[10px] text-sun-800/40 tracking-[0.3em] uppercase">02 &middot; TECHO Argentina</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">Organizing people vs. actually leading them.</h3>
           <p class="text-sun-800/50 font-body text-sm leading-relaxed">What worked at 10 volunteers broke at 100. Structure, feedback loops, and trust.</p>
           <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:200ms" onclick="openCase(2)">
+        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:200ms" role="button" tabindex="0" onclick="openCase(2)" onkeydown="if(event.key==='Enter')openCase(2)">
           <span class="font-headline text-[10px] text-sun-800/40 tracking-[0.3em] uppercase">03 &middot; Industrial Design</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">What iteration actually costs when it's physical.</h3>
           <p class="text-sun-800/50 font-body text-sm leading-relaxed">Zamba: a nut harvester for small producers. Built, tested, failed, adjusted, repeated.</p>
           <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:300ms" onclick="openCase(3)">
+        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:300ms" role="button" tabindex="0" onclick="openCase(3)" onkeydown="if(event.key==='Enter')openCase(3)">
           <span class="font-headline text-[10px] text-sun-800/40 tracking-[0.3em] uppercase">04 &middot; Education</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">Designing for users who won't read the instructions.</h3>
           <p class="text-sun-800/50 font-body text-sm leading-relaxed">Manos Felices: transparent soaps with hidden toys. A pandemic project for six-year-olds.</p>
@@ -604,7 +594,7 @@
       <!-- Behance CTA -->
       <div class="reveal-up mt-16 text-center relative z-10">
         <p class="font-headline text-base text-sun-800/50 mb-4">More work on Behance</p>
-        <a href="https://www.behance.net/valentialfonso7" target="_blank" class="magnetic-btn inline-flex items-center gap-3 bg-sun-900 text-sun-200 px-8 py-4 font-headline text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-sun-400 hover:text-sun-900 transition-all duration-300">
+        <a href="https://www.behance.net/valentialfonso7" target="_blank" rel="noopener noreferrer" class="magnetic-btn inline-flex items-center gap-3 bg-sun-900 text-sun-200 px-8 py-4 font-headline text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-sun-400 hover:text-sun-900 transition-all duration-300">
           Full portfolio on Behance <span class="material-symbols-outlined text-lg">arrow_outward</span>
         </a>
       </div>
@@ -671,7 +661,6 @@
     <!-- 006 CONTACT -->
     <section class="relative overflow-hidden grain grain-light bg-gradient-dark" id="contact">
       <div class="py-32 md:py-44 px-6 md:px-16 relative z-10">
-        <div class="mouse-reactive absolute top-20 right-20 w-52 h-52 rounded-full border border-sun-400/4 hidden md:block" data-speed="0.04"></div>
 
         <div class="max-w-5xl">
           <div class="reveal-up">
@@ -753,25 +742,24 @@
 
     document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
 
-    function animateGlows() {
+    function animationLoop() {
+      // Glow blobs
       g1x += (mouseX - g1x) * 0.04; g1y += (mouseY - g1y) * 0.04;
       g2x += (mouseX - g2x) * 0.08; g2y += (mouseY - g2y) * 0.08;
       g3x += (mouseX - g3x) * 0.14; g3y += (mouseY - g3y) * 0.14;
       glow1.style.left = g1x - 250 + 'px'; glow1.style.top = g1y - 250 + 'px';
       glow2.style.left = g2x - 175 + 'px'; glow2.style.top = g2y - 175 + 'px';
       glow3.style.left = g3x - 100 + 'px'; glow3.style.top = g3y - 100 + 'px';
-      requestAnimationFrame(animateGlows);
-    }
-    animateGlows();
 
-    function animateCursor() {
+      // Cursor dot
       dotX += (mouseX - dotX) * 0.18;
       dotY += (mouseY - dotY) * 0.18;
       cursorDot.style.left = dotX + 'px';
       cursorDot.style.top = dotY + 'px';
       const dx = dotX - lastStepX, dy = dotY - lastStepY;
       if (Math.sqrt(dx*dx + dy*dy) > STEP_DIST) { placeStep(dotX, dotY, dx, dy); lastStepX = dotX; lastStepY = dotY; }
-      requestAnimationFrame(animateCursor);
+
+      requestAnimationFrame(animationLoop);
     }
 
     function placeStep(x, y, dx, dy) {
@@ -793,7 +781,7 @@
       if (stepCountEl) stepCountEl.textContent = stepCount;
     }
 
-    animateCursor(); lastStepX = mouseX; lastStepY = mouseY;
+    animationLoop(); lastStepX = mouseX; lastStepY = mouseY;
 
     document.querySelectorAll('a, button, .tilt-card, .group, .magnetic-btn, .case-study').forEach(el => {
       el.addEventListener('mouseenter', () => cursorDot.classList.add('hovering'));
@@ -933,12 +921,13 @@
     document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-scale').forEach(el => revealObserver.observe(el));
 
     // SCROLL SKEW
+    const skewEls = document.querySelectorAll('.skew-on-scroll');
     let lastScrollY = window.scrollY, currentSkew = 0, skewTicking = false;
     function updateSkew() {
       const scrollY = window.scrollY, velocity = scrollY - lastScrollY;
       currentSkew += (Math.max(-2.5, Math.min(2.5, velocity*0.04)) - currentSkew) * 0.1;
       lastScrollY = scrollY;
-      document.querySelectorAll('.skew-on-scroll').forEach(el => { el.style.transform = `skewY(${currentSkew}deg)`; });
+      skewEls.forEach(el => { el.style.transform = `skewY(${currentSkew}deg)`; });
       if (Math.abs(currentSkew) > 0.01) requestAnimationFrame(updateSkew); else skewTicking = false;
     }
     window.addEventListener('scroll', () => { if (!skewTicking) { skewTicking=true; requestAnimationFrame(updateSkew); } }, { passive: true });
@@ -961,17 +950,6 @@
       });
       btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
     });
-
-    // MOUSE SHAPES
-    function updateMouseShapes() {
-      const cx = mouseX-window.innerWidth/2, cy = mouseY-window.innerHeight/2;
-      document.querySelectorAll('.mouse-reactive').forEach(el => {
-        const s = parseFloat(el.dataset.speed)||0.02;
-        el.style.transform = `translate(${cx*s}px, ${cy*s}px)`;
-      });
-      requestAnimationFrame(updateMouseShapes);
-    }
-    updateMouseShapes();
 
     // NAV
     const nav = document.querySelector('nav');
