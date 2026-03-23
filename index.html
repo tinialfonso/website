@@ -70,34 +70,34 @@
     /* ========== GRADIENT BACKGROUNDS ========== */
     .bg-gradient-hero {
       background:
-        radial-gradient(ellipse 800px 700px at 8% 80%, rgba(230,182,53,0.4) 0%, transparent 60%),
-        radial-gradient(ellipse 600px 500px at 85% 15%, rgba(255,220,124,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse 500px 400px at 45% 50%, rgba(195,160,64,0.2) 0%, transparent 65%),
-        radial-gradient(ellipse 400px 350px at 70% 75%, rgba(255,220,124,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 900px 800px at 8% 80%, rgba(230,182,53,0.7) 0%, transparent 55%),
+        radial-gradient(ellipse 700px 600px at 85% 15%, rgba(255,220,124,0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 400px at 45% 50%, rgba(195,160,64,0.4) 0%, transparent 60%),
+        radial-gradient(ellipse 500px 400px at 70% 75%, rgba(255,220,124,0.45) 0%, transparent 55%),
         linear-gradient(180deg, var(--sun-50) 0%, var(--sun-100) 100%);
     }
     .bg-gradient-warm {
       background:
-        radial-gradient(ellipse 700px 550px at 80% 20%, rgba(230,182,53,0.3) 0%, transparent 55%),
-        radial-gradient(ellipse 600px 450px at 10% 70%, rgba(255,220,124,0.3) 0%, transparent 55%),
-        radial-gradient(ellipse 450px 350px at 50% 90%, rgba(195,160,64,0.2) 0%, transparent 65%),
-        radial-gradient(ellipse 500px 300px at 65% 5%, rgba(255,220,124,0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 800px 600px at 80% 20%, rgba(230,182,53,0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 700px 500px at 10% 70%, rgba(255,220,124,0.55) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 400px at 50% 90%, rgba(195,160,64,0.4) 0%, transparent 60%),
+        radial-gradient(ellipse 600px 350px at 65% 5%, rgba(255,220,124,0.35) 0%, transparent 55%),
         linear-gradient(180deg, var(--sun-100) 0%, var(--sun-150) 100%);
     }
     .bg-gradient-soft {
       background:
-        radial-gradient(ellipse 650px 500px at 20% 30%, rgba(255,220,124,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse 550px 400px at 80% 60%, rgba(230,182,53,0.25) 0%, transparent 55%),
-        radial-gradient(ellipse 500px 400px at 50% 15%, rgba(195,160,64,0.2) 0%, transparent 65%),
-        radial-gradient(ellipse 400px 350px at 5% 85%, rgba(255,220,124,0.3) 0%, transparent 55%),
-        radial-gradient(ellipse 450px 300px at 95% 35%, rgba(230,182,53,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 750px 550px at 20% 30%, rgba(255,220,124,0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 650px 450px at 80% 60%, rgba(230,182,53,0.5) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 400px at 50% 15%, rgba(195,160,64,0.4) 0%, transparent 60%),
+        radial-gradient(ellipse 500px 400px at 5% 85%, rgba(255,220,124,0.5) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 350px at 95% 35%, rgba(230,182,53,0.3) 0%, transparent 55%),
         linear-gradient(180deg, var(--sun-150) 0%, var(--sun-200) 50%, var(--sun-150) 100%);
     }
     .bg-gradient-dark {
       background:
-        radial-gradient(ellipse 700px 550px at 15% 75%, rgba(230,182,53,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse 550px 450px at 85% 15%, rgba(255,220,124,0.25) 0%, transparent 55%),
-        radial-gradient(ellipse 450px 350px at 50% 45%, rgba(195,160,64,0.2) 0%, transparent 65%),
+        radial-gradient(ellipse 800px 600px at 15% 75%, rgba(230,182,53,0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 650px 500px at 85% 15%, rgba(255,220,124,0.45) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 400px at 50% 45%, rgba(195,160,64,0.35) 0%, transparent 60%),
         linear-gradient(135deg, #7A6010 0%, #8B6D14 40%, #7A6010 100%);
     }
 
@@ -106,20 +106,21 @@
       position: fixed;
       border-radius: 50%;
       pointer-events: none;
-      z-index: 0;
-      filter: blur(2px);
+      z-index: 9990;
+      filter: blur(50px);
+      mix-blend-mode: multiply;
     }
     #cursor-glow {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(255,220,124,0.25) 0%, rgba(230,182,53,0.1) 40%, transparent 70%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,160,40,0.35) 0%, rgba(180,140,30,0.15) 40%, transparent 70%);
     }
     #cursor-glow-2 {
-      width: 350px; height: 350px;
-      background: radial-gradient(circle, rgba(230,182,53,0.2) 0%, rgba(195,160,64,0.08) 40%, transparent 70%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(190,150,35,0.3) 0%, rgba(170,130,25,0.1) 40%, transparent 70%);
     }
     #cursor-glow-3 {
-      width: 200px; height: 200px;
-      background: radial-gradient(circle, rgba(255,220,124,0.3) 0%, transparent 65%);
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(180,140,30,0.4) 0%, transparent 65%);
     }
 
     /* ========== GRAIN ========== */
@@ -438,10 +439,10 @@
             Industrial designer by training. Program manager by accident. Product manager by choice.
           </p>
           <p class="font-body text-lg text-sun-100/55 leading-[1.7]">
-            The common thread is curiosity and collaboration, taking something that doesn't quite exist yet and figuring it out with the right people. That's where the interesting work lives.
+            What I care about most is the people and the process of making something together. There's something about taking a shared, half-formed idea and turning it into something real that never stops being exciting to me.
           </p>
           <p class="font-body text-lg text-sun-100/55 leading-[1.7]">
-            AI is in the workflow now. It compresses the distance between a question and an answer, and leaves more energy for the parts that actually need human judgment.
+            AI has become a genuine part of that. It gives more room to explore, makes iteration faster, and lets the creative energy go further.
           </p>
         </div>
 
@@ -451,6 +452,10 @@
           <span class="chip bg-sun-500/10 text-sun-200/70">Design Thinking</span>
           <span class="chip bg-sun-500/10 text-sun-200/70">Stakeholder Management</span>
           <span class="chip bg-sun-500/10 text-sun-200/70">Product Coordination</span>
+          <span class="chip bg-sun-500/10 text-sun-200/70">Agile Methodologies</span>
+          <span class="chip bg-sun-500/10 text-sun-200/70">User Research</span>
+          <span class="chip bg-sun-500/10 text-sun-200/70">Cross-functional Leadership</span>
+          <span class="chip bg-sun-500/10 text-sun-200/70">Roadmapping</span>
           <span class="chip bg-sun-500/15 text-sun-200/85">AI-powered Product Design</span>
           <span class="chip bg-sun-500/10 text-sun-200/70">Spanish &middot; English &middot; French</span>
         </div>
@@ -670,10 +675,9 @@
             <p class="font-body text-xl text-sun-100/65 leading-relaxed max-w-2xl">
               Thanks for walking all the way through. If something here resonated, a project, a way of thinking, a problem you're working on, drop me a line.
             </p>
-            <p class="font-headline text-sm text-sun-200/55 italic">No elevator pitch required.</p>
           </div>
 
-          <div class="reveal-up grid grid-cols-1 md:grid-cols-2 gap-6" style="transition-delay: 250ms;">
+          <div class="reveal-up grid grid-cols-1 md:grid-cols-3 gap-6" style="transition-delay: 250ms;">
             <a class="border border-sun-300/8 p-8 group hover:bg-sun-200 hover:text-sun-900 transition-all duration-500 rounded-2xl text-sun-100" href="mailto:tini.alfo@gmail.com">
               <span class="font-headline text-[10px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">Email</span>
               <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">tini.alfo@gmail.com</p>
@@ -682,10 +686,14 @@
               <span class="font-headline text-[10px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">WhatsApp</span>
               <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">+54 11 6790 3326</p>
             </a>
+            <a class="border border-sun-300/8 p-8 group hover:bg-sun-200 hover:text-sun-900 transition-all duration-500 rounded-2xl text-sun-100" href="https://www.linkedin.com/in/valentina-alfonso-438a14166/" target="_blank" rel="noopener noreferrer">
+              <span class="font-headline text-[10px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">LinkedIn</span>
+              <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">Valentina Alfonso</p>
+            </a>
           </div>
 
           <div class="reveal-up mt-8" style="transition-delay: 350ms;">
-            <span class="font-body text-sm text-sun-100/40">Vicente L&oacute;pez, Buenos Aires</span>
+            <span class="font-body text-sm text-sun-100/40">Buenos Aires</span>
           </div>
         </div>
       </div>
@@ -713,7 +721,7 @@
   </footer>
 
   <!-- WIDGETS -->
-  <div class="fixed bottom-8 right-8 z-40 hidden md:block load-hidden" id="step-counter" style="animation: loadIn 0.6s 2s cubic-bezier(0.16,1,0.3,1) forwards">
+  <div class="fixed bottom-8 right-8 z-40 load-hidden" id="step-counter" style="animation: loadIn 0.6s 2s cubic-bezier(0.16,1,0.3,1) forwards">
     <div class="p-4 shadow-2xl border border-sun-300/10 flex flex-col gap-1 rounded-2xl backdrop-blur-xl" style="background: rgba(139,105,20,0.92);">
       <span class="font-headline text-[9px] uppercase text-sun-200/45 tracking-widest">Steps taken</span>
       <div class="flex items-center gap-2">
@@ -745,9 +753,9 @@
       g1x += (mouseX - g1x) * 0.04; g1y += (mouseY - g1y) * 0.04;
       g2x += (mouseX - g2x) * 0.08; g2y += (mouseY - g2y) * 0.08;
       g3x += (mouseX - g3x) * 0.14; g3y += (mouseY - g3y) * 0.14;
-      glow1.style.left = g1x - 250 + 'px'; glow1.style.top = g1y - 250 + 'px';
-      glow2.style.left = g2x - 175 + 'px'; glow2.style.top = g2y - 175 + 'px';
-      glow3.style.left = g3x - 100 + 'px'; glow3.style.top = g3y - 100 + 'px';
+      glow1.style.left = g1x - 300 + 'px'; glow1.style.top = g1y - 300 + 'px';
+      glow2.style.left = g2x - 200 + 'px'; glow2.style.top = g2y - 200 + 'px';
+      glow3.style.left = g3x - 125 + 'px'; glow3.style.top = g3y - 125 + 'px';
 
       // Cursor dot
       dotX += (mouseX - dotX) * 0.18;
@@ -795,22 +803,22 @@
         { type: 'outcome', label: 'What held', text: 'The curriculum redesign worked not because the content improved, but because the stages made sense. Students understood the product logic at each step. That distinction between what\'s built and how people move through it shapes every product decision since.', skills: ['Product thinking', 'Design Thinking facilitation', 'Stakeholder management', 'Curriculum redesign'] }
       ]},
       { num: '02', label: 'TECHO Argentina', title: 'Organizing people vs. actually leading them.', panels: [
-        { type: 'intro', heading: 'TECHO Argentina', sub: 'Social Impact', tagline: 'Organizing people vs. actually leading them.' },
-        { type: 'split', label: 'The context', text: 'Started as a volunteer in 2017, building emergency housing in vulnerable neighborhoods. Grew into leading constructions, then in 2021 joined the operations team coordinating volunteer programs across Buenos Aires Zona Norte.', label2: 'The real constraint', text2: 'The stakes were specific. Families were going to live in what got built. That changes how \u2018good enough\u2019 gets defined, and it changes how accountability works,you can\'t afford vagueness, but you also can\'t afford to burn out the people you depend on.' },
-        { type: 'quote', quote: 'The logistics,tracking, onboarding, follow-up,were the invisible layer. When they worked, nobody noticed. When they didn\'t, a site had the wrong number of people or the wrong tools.' },
-        { type: 'outcome', label: 'What scaled and what didn\'t', text: 'What worked at 10 volunteers broke at 100. Tighter control wasn\'t the answer. Clearer structure, faster feedback loops, and more trust in the people closest to the work was. The systems existed to keep the goal visible when things got noisy.', skills: ['Large-scale coordination', 'Volunteer management', 'Operations systems', 'Community partnerships'] }
+        { type: 'intro', heading: 'TECHO Argentina', sub: 'Social Impact', tagline: 'Organizing people vs. actually leading them.', img: 'images/techo1.jpeg' },
+        { type: 'split', label: 'The context', text: 'Started as a volunteer in 2017, building emergency housing in vulnerable neighborhoods. Grew into leading constructions, then in 2021 joined the operations team coordinating volunteer programs across Buenos Aires Zona Norte.', label2: 'The real constraint', text2: 'The stakes were specific. Families were going to live in what got built. That changes how \u2018good enough\u2019 gets defined, and it changes how accountability works,you can\'t afford vagueness, but you also can\'t afford to burn out the people you depend on.', img: 'images/techo2.jpeg', img2: 'images/techo3.jpeg' },
+        { type: 'quote', quote: 'The logistics,tracking, onboarding, follow-up,were the invisible layer. When they worked, nobody noticed. When they didn\'t, a site had the wrong number of people or the wrong tools.', img: 'images/techo4.jpeg' },
+        { type: 'outcome', label: 'What scaled and what didn\'t', text: 'What worked at 10 volunteers broke at 100. Tighter control wasn\'t the answer. Clearer structure, faster feedback loops, and more trust in the people closest to the work was. The systems existed to keep the goal visible when things got noisy.', skills: ['Large-scale coordination', 'Volunteer management', 'Operations systems', 'Community partnerships'], img: 'images/techo5.jpeg' }
       ]},
       { num: '03', label: 'Industrial Design', title: 'What iteration actually costs when it\u2019s physical.', panels: [
-        { type: 'intro', heading: 'Zamba', sub: 'Industrial Design \u00b7 UBA', tagline: 'What iteration actually costs when it\u2019s physical.' },
-        { type: 'split', label: 'The project', text: 'Final year at UBA. Design a machine that doesn\'t exist, make it functional. The problem: nut harvesting equipment built for industrial scale left small producers with nothing. Zamba was designed for them.', label2: 'What wasn\'t in the curriculum', text2: 'Designing something and building it are different problems. Metal fabrication, welding, field conditions,none of that was taught. Product decisions had to be made before being ready for them, and the timeline didn\'t have room for that learning curve.' },
-        { type: 'quote', quote: 'The failed tests were the most useful data available. They showed exactly what needed to change, faster than any spec would have.' },
-        { type: 'outcome', label: 'The actual lesson', text: 'Physical iteration cycles cost time, materials, and morale in ways digital doesn\'t. The discipline is in knowing which failures to move through quickly and which need more attention. Distributing work well turned out to be a product problem, not a management one.', skills: ['Product design end-to-end', 'Rapid prototyping', 'Physical manufacturing', 'Technical documentation'] }
+        { type: 'intro', heading: 'Zamba', sub: 'Industrial Design \u00b7 UBA', tagline: 'What iteration actually costs when it\u2019s physical.', img: 'images/zamba1.jpeg' },
+        { type: 'split', label: 'The project', text: 'Final year at UBA. Design a machine that doesn\'t exist, make it functional. The problem: nut harvesting equipment built for industrial scale left small producers with nothing. Zamba was designed for them.', label2: 'What wasn\'t in the curriculum', text2: 'Designing something and building it are different problems. Metal fabrication, welding, field conditions,none of that was taught. Product decisions had to be made before being ready for them, and the timeline didn\'t have room for that learning curve.', img: 'images/zamba2.jpeg', img2: 'images/zamba3.mp4' },
+        { type: 'quote', quote: 'The failed tests were the most useful data available. They showed exactly what needed to change, faster than any spec would have.', img: 'images/zamba4.jpeg' },
+        { type: 'outcome', label: 'The actual lesson', text: 'Physical iteration cycles cost time, materials, and morale in ways digital doesn\'t. The discipline is in knowing which failures to move through quickly and which need more attention. Distributing work well turned out to be a product problem, not a management one.', skills: ['Product design end-to-end', 'Rapid prototyping', 'Physical manufacturing', 'Technical documentation'], img: 'images/zamba5.mp4' }
       ]},
       { num: '04', label: 'Education', title: 'Designing for users who won\u2019t read the instructions.', panels: [
-        { type: 'intro', heading: 'Manos Felices', sub: 'Education', tagline: 'Designing for users who won\u2019t read the instructions.' },
-        { type: 'split', label: 'The situation', text: '2020. A school social coordinator with no in-person contact. The project needed to work from home, with minimal adult supervision, for six-year-olds.', label2: 'The constraint that shaped everything', text2: 'Six-year-olds don\'t respond to goals. They respond to what\'s in front of them. So whatever got designed had to make the right behavior the obvious one, not the instructed one. That ruled out most ideas.' },
-        { type: 'quote', quote: 'The toy inside the soap was the whole idea. Handwashing was just how you got to it. The incentive had to be built into the product, not explained on top of it.' },
-        { type: 'outcome', label: 'Why the donation piece mattered', text: 'The soaps went to children in vulnerable communities. That wasn\'t added to make the project meaningful,it was there from the start, because first-graders needed a concrete reason to care about someone outside their household. A product decision, not a feel-good layer.', skills: ['Behavioral design', 'Product design under constraints', 'User empathy', 'Community engagement'], closing: 'A small project. The one that comes to mind most often when a product decision needs checking against actual user behavior.' }
+        { type: 'intro', heading: 'Manos Felices', sub: 'Education', tagline: 'Designing for users who won\u2019t read the instructions.', img: 'images/manosfelices1.jpeg' },
+        { type: 'split', label: 'The situation', text: '2020. A school social coordinator with no in-person contact. The project needed to work from home, with minimal adult supervision, for six-year-olds.', label2: 'The constraint that shaped everything', text2: 'Six-year-olds don\'t respond to goals. They respond to what\'s in front of them. So whatever got designed had to make the right behavior the obvious one, not the instructed one. That ruled out most ideas.', img: 'images/manosfelices2.jpeg', img2: 'images/manosfelices3.jpeg' },
+        { type: 'quote', quote: 'The toy inside the soap was the whole idea. Handwashing was just how you got to it. The incentive had to be built into the product, not explained on top of it.', img: 'images/manosfelices4.jpeg' },
+        { type: 'outcome', label: 'Why the donation piece mattered', text: 'The soaps went to children in vulnerable communities. That wasn\'t added to make the project meaningful,it was there from the start, because first-graders needed a concrete reason to care about someone outside their household. A product decision, not a feel-good layer.', skills: ['Behavioral design', 'Product design under constraints', 'User empathy', 'Community engagement'], closing: 'A small project. The one that comes to mind most often when a product decision needs checking against actual user behavior.', img: 'images/manosfelices5.jpeg' }
       ]}
     ];
 
@@ -819,12 +827,18 @@
     const dotsContainer = document.getElementById('story-dots');
     let totalPanels = 0;
 
+    function mediaTag(src, cls) {
+      if (!src) return `<div class="${cls} img-placeholder"><span class="material-symbols-outlined text-5xl">image</span></div>`;
+      if (src.endsWith('.mp4')) return `<video class="${cls}" src="${src}" autoplay loop muted playsinline style="object-fit:cover;"></video>`;
+      return `<img class="${cls}" src="${src}" alt="" loading="lazy" style="object-fit:cover;" />`;
+    }
+
     function buildPanel(p) {
       const el = document.createElement('div');
       el.className = 'story-panel';
       if (p.type === 'intro') {
         el.innerHTML = `<div class="panel-inner flex flex-col md:flex-row items-center gap-12">
-          <div class="img-placeholder w-full md:w-1/2 h-[50vh] md:h-[70vh] shrink-0"><span class="material-symbols-outlined text-5xl">image</span></div>
+          ${mediaTag(p.img, 'w-full md:w-1/2 h-[50vh] md:h-[70vh] shrink-0 rounded-2xl')}
           <div class="md:w-1/2">
             <span class="font-headline text-[10px] text-sun-800/40 tracking-[0.3em] uppercase block mb-4">${p.sub}</span>
             <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight text-sun-900 mb-6">${p.heading}</h2>
@@ -834,19 +848,19 @@
       } else if (p.type === 'split') {
         el.innerHTML = `<div class="panel-inner grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
-            <div class="img-placeholder h-[35vh] mb-8"><span class="material-symbols-outlined text-4xl">image</span></div>
+            ${mediaTag(p.img, 'w-full h-[35vh] rounded-2xl mb-8')}
             <h4 class="font-headline text-xs uppercase tracking-widest text-sun-800/40 mb-3">${p.label}</h4>
             <p class="font-body text-base text-sun-800/65 leading-relaxed">${p.text}</p>
           </div>
           <div>
             <h4 class="font-headline text-xs uppercase tracking-widest text-sun-800/40 mb-3">${p.label2}</h4>
             <p class="font-body text-base text-sun-800/65 leading-relaxed mb-8">${p.text2}</p>
-            <div class="img-placeholder h-[35vh]"><span class="material-symbols-outlined text-4xl">image</span></div>
+            ${mediaTag(p.img2, 'w-full h-[35vh] rounded-2xl')}
           </div>
         </div>`;
       } else if (p.type === 'quote') {
         el.innerHTML = `<div class="panel-inner flex flex-col items-center text-center">
-          <div class="img-placeholder w-full max-w-3xl h-[40vh] mb-12"><span class="material-symbols-outlined text-5xl">image</span></div>
+          ${mediaTag(p.img, 'w-full max-w-3xl h-[40vh] rounded-2xl mb-12')}
           <p class="font-headline text-2xl md:text-4xl font-light text-sun-900 italic leading-relaxed max-w-3xl">&ldquo;${p.quote}&rdquo;</p>
         </div>`;
       } else if (p.type === 'outcome') {
@@ -858,7 +872,7 @@
             <div class="flex flex-wrap gap-2 mt-8">${p.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
           </div>
           <div class="md:col-span-2">
-            <div class="img-placeholder h-[45vh]"><span class="material-symbols-outlined text-5xl">image</span></div>
+            ${mediaTag(p.img, 'w-full h-[45vh] rounded-2xl')}
           </div>
         </div>`;
       }
@@ -952,6 +966,22 @@
     // NAV
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+    // MOBILE SCROLL STEPS
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      let lastScrollForSteps = 0;
+      const SCROLL_STEP_DIST = 120;
+      window.addEventListener('scroll', () => {
+        const scrolled = Math.abs(window.scrollY - lastScrollForSteps);
+        if (scrolled >= SCROLL_STEP_DIST) {
+          const newSteps = Math.floor(scrolled / SCROLL_STEP_DIST);
+          stepCount += newSteps;
+          if (stepCountEl) stepCountEl.textContent = stepCount;
+          lastScrollForSteps = window.scrollY;
+        }
+      }, { passive: true });
+    }
 
   </script>
 
