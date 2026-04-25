@@ -280,6 +280,22 @@
     }
     .exp-item:hover::before { width: 100%; }
 
+    /* Role description accordion */
+    .role-desc {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease, margin 0.3s ease;
+      margin-top: 0;
+    }
+    .role-row.open .role-desc,
+    .role-row:hover .role-desc {
+      max-height: 120px;
+      opacity: 1;
+      margin-top: 6px;
+    }
+    .role-row { cursor: pointer; }
+
 
     /* ========== CASE STUDY CARDS ========== */
     .case-grid-card {
@@ -514,13 +530,19 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">1 year</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Product Manager</span> &middot; Oct 2025 &ndash; Present</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Product Manager</span> &middot; Oct 2025 &ndash; Present</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Owning product roadmap and discovery for AI-driven data enrichment tools. Leading cross-functional alignment between engineering, design, and GTM.</div>
               </div>
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/25 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900/70 font-medium">Project Manager</span> &middot; Apr 2025 &ndash; Oct 2025</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/25 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900/70 font-medium">Project Manager</span> &middot; Apr 2025 &ndash; Oct 2025</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Coordinated sprints, managed timelines, and bridged stakeholder communication across product and engineering teams.</div>
               </div>
             </div>
           </div>
@@ -532,13 +554,19 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">1 yr 11 mo</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Project Manager</span> &middot; Apr 2024 &ndash; Apr 2025</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Project Manager</span> &middot; Apr 2024 &ndash; Apr 2025</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Led education program delivery for corporate clients including Banco Patagonia. Managed stakeholder alignment, curriculum design, and facilitator coordination.</div>
               </div>
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/25 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900/70 font-medium">Multimedia Designer</span> &middot; Jun 2023 &ndash; Apr 2024</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/25 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900/70 font-medium">Multimedia Designer</span> &middot; Jun 2023 &ndash; Apr 2024</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Designed educational materials, presentations, and visual systems for innovation programs across multiple formats.</div>
               </div>
             </div>
           </div>
@@ -550,9 +578,12 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">9 mo</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Data &amp; Design Analyst</span> &middot; May 2023 &ndash; Jan 2024</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Data &amp; Design Analyst</span> &middot; May 2023 &ndash; Jan 2024</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Analyzed social program data and designed visual reports for internal decision-making. Built dashboards and presentation materials for government stakeholders.</div>
               </div>
             </div>
           </div>
@@ -564,9 +595,12 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">1 yr 10 mo</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Project Manager</span> &middot; Aug 2021 &ndash; Jun 2023</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Project Manager</span> &middot; Aug 2021 &ndash; Jun 2023</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Coordinated volunteer construction programs across Buenos Aires Zona Norte. Managed logistics, onboarding, and operations for teams of 10 to 100+ volunteers.</div>
               </div>
             </div>
           </div>
@@ -578,9 +612,12 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">2021</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Head of Community Service</span> &middot; 2021</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Head of Community Service</span> &middot; 2021</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Organized community service initiatives and coordinated student volunteer programs focused on social impact projects.</div>
               </div>
             </div>
           </div>
@@ -591,9 +628,12 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">9 mo</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Industrial Design</span> &middot; Feb &ndash; Oct 2022</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Industrial Design</span> &middot; Feb &ndash; Oct 2022</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Designed products for social enterprise focused on reuse and circular economy. Prototyping, user testing, and production-ready documentation.</div>
               </div>
             </div>
           </div>
@@ -604,9 +644,12 @@
               <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">2 yrs</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
-              <div class="flex items-baseline gap-3">
-                <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
-                <p><span class="text-sun-900 font-medium">Graphic Design</span> &middot; 2021 &ndash; 2023</p>
+              <div class="role-row" onclick="this.classList.toggle('open')">
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Graphic Design</span> &middot; 2021 &ndash; 2023</p>
+                </div>
+                <div class="role-desc pl-4 text-sm text-sun-800/50">Brand identity, social media assets, and print design for small businesses and independent clients.</div>
               </div>
             </div>
           </div>
@@ -872,10 +915,10 @@
     // CASE STUDY HORIZONTAL STORY
     const caseData = [
       { num: '01', label: 'tekuoia', title: 'When the product is the experience, not the content.', panels: [
-        { type: 'intro', heading: 'Banco Patagonia Innova', sub: 'tekuoia', tagline: 'When the product is the experience, not the content.' },
-        { type: 'split', label: 'The program', text: 'Banco Patagonia Innova ran as two parallel tracks, secondary students and university students, with different maturity levels, different expectations, and very different ideas of what finishing a project meant. The content wasn\'t the hard part. The user journey was.', label2: 'The tension', text2: 'Four stakeholders, four different definitions of success. The client wanted a polished program. The schools wanted low friction. The students wanted their ideas to feel real. Keeping those aligned without flattening any of them was the actual job.' },
-        { type: 'quote', quote: 'Facilitating sessions directly was the most useful thing,not to have answers, but to stop guessing where users were dropping off.' },
-        { type: 'outcome', label: 'What held', text: 'The curriculum redesign worked not because the content improved, but because the stages made sense. Students understood the product logic at each step. That distinction between what\'s built and how people move through it shapes every product decision since.', skills: ['Product thinking', 'Design Thinking facilitation', 'Stakeholder management', 'Curriculum redesign'] }
+        { type: 'intro', heading: 'Banco Patagonia Innova', sub: 'tekuoia', tagline: 'When the product is the experience, not the content.', img: 'images/tekuoia1.jpg' },
+        { type: 'split', label: 'The program', text: 'Banco Patagonia Innova ran as two parallel tracks, secondary students and university students, with different maturity levels, different expectations, and very different ideas of what finishing a project meant. The content wasn\'t the hard part. The user journey was.', label2: 'The tension', text2: 'Four stakeholders, four different definitions of success. The client wanted a polished program. The schools wanted low friction. The students wanted their ideas to feel real. Keeping those aligned without flattening any of them was the actual job.', img: 'images/tekuoia2.jpg', img2: 'images/tekuoia3.jpg' },
+        { type: 'quote', quote: 'Facilitating sessions directly was the most useful thing,not to have answers, but to stop guessing where users were dropping off.', img: 'images/tekuoai5.jpg', imgPos: 'top' },
+        { type: 'outcome', label: 'What held', text: 'The curriculum redesign worked not because the content improved, but because the stages made sense. Students understood the product logic at each step. That distinction between what\'s built and how people move through it shapes every product decision since.', skills: ['Product thinking', 'Design Thinking facilitation', 'Stakeholder management', 'Curriculum redesign'], img: 'images/tekuoia6.jpg' }
       ]},
       { num: '02', label: 'TECHO Argentina', title: 'Organizing people vs. actually leading them.', panels: [
         { type: 'intro', heading: 'TECHO Argentina', sub: 'Social Impact', tagline: 'Organizing people vs. actually leading them.', img: 'images/techo1.jpeg' },
@@ -902,10 +945,11 @@
     const dotsContainer = document.getElementById('story-dots');
     let totalPanels = 0;
 
-    function mediaTag(src, cls) {
+    function mediaTag(src, cls, pos) {
+      const posStyle = pos ? `object-position:${pos};` : '';
       if (!src) return `<div class="${cls} img-placeholder"><span class="material-symbols-outlined text-5xl">image</span></div>`;
-      if (src.endsWith('.mp4')) return `<video class="${cls}" src="${src}" autoplay loop muted playsinline style="object-fit:cover;"></video>`;
-      return `<img class="${cls}" src="${src}" alt="" loading="lazy" style="object-fit:cover;" />`;
+      if (src.endsWith('.mp4')) return `<video class="${cls}" src="${src}" autoplay loop muted playsinline style="object-fit:cover;${posStyle}"></video>`;
+      return `<img class="${cls}" src="${src}" alt="" loading="lazy" style="object-fit:cover;${posStyle}" />`;
     }
 
     function buildPanel(p) {
@@ -913,7 +957,7 @@
       el.className = 'story-panel';
       if (p.type === 'intro') {
         el.innerHTML = `<div class="panel-inner flex flex-col md:flex-row items-center gap-12">
-          ${mediaTag(p.img, 'w-full md:w-1/2 h-[50vh] md:h-[70vh] shrink-0 rounded-2xl')}
+          ${mediaTag(p.img, 'w-full md:w-1/2 h-[50vh] md:h-[70vh] shrink-0 rounded-2xl', p.imgPos)}
           <div class="md:w-1/2">
             <span class="font-headline text-[11px] text-sun-800/40 tracking-[0.3em] uppercase block mb-4">${p.sub}</span>
             <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight text-sun-900 mb-6">${p.heading}</h2>
@@ -925,17 +969,17 @@
           <div>
             <h4 class="font-headline text-xs uppercase tracking-widest text-sun-800/40 mb-3">${p.label}</h4>
             <p class="font-body text-base text-sun-800/65 leading-relaxed mb-8">${p.text}</p>
-            ${mediaTag(p.img, 'w-full h-[35vh] rounded-2xl')}
+            ${mediaTag(p.img, 'w-full h-[35vh] rounded-2xl', p.imgPos)}
           </div>
           <div>
             <h4 class="font-headline text-xs uppercase tracking-widest text-sun-800/40 mb-3">${p.label2}</h4>
             <p class="font-body text-base text-sun-800/65 leading-relaxed mb-8">${p.text2}</p>
-            ${mediaTag(p.img2, 'w-full h-[35vh] rounded-2xl')}
+            ${mediaTag(p.img2, 'w-full h-[35vh] rounded-2xl', p.imgPos2)}
           </div>
         </div>`;
       } else if (p.type === 'quote') {
         el.innerHTML = `<div class="panel-inner flex flex-col items-center text-center">
-          ${mediaTag(p.img, 'w-full max-w-3xl h-[40vh] rounded-2xl mb-12')}
+          ${mediaTag(p.img, 'w-full max-w-3xl h-[40vh] rounded-2xl mb-12', p.imgPos)}
           <p class="font-headline text-2xl md:text-4xl font-light text-sun-900 italic leading-relaxed max-w-3xl">&ldquo;${p.quote}&rdquo;</p>
         </div>`;
       } else if (p.type === 'outcome') {
@@ -947,7 +991,7 @@
             <div class="flex flex-wrap gap-2 mt-8">${p.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
           </div>
           <div class="md:col-span-2">
-            ${mediaTag(p.img, 'w-full h-[45vh] rounded-2xl')}
+            ${mediaTag(p.img, 'w-full h-[45vh] rounded-2xl', p.imgPos)}
           </div>
         </div>`;
       }
