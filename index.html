@@ -57,17 +57,27 @@
       theme: {
         extend: {
           colors: {
-            'sun-50':  '#FFFDF5',
-            'sun-100': '#FFF9E8',
-            'sun-150': '#FFF3D4',
-            'sun-200': '#FFE4A0',
-            'sun-300': '#FBDB8A',
-            'sun-400': '#FFDC7C',
-            'sun-500': '#E6B635',
-            'sun-600': '#C3A040',
-            'sun-700': '#B08E30',
-            'sun-800': '#4A4237',
-            'sun-900': '#2A2519',
+            'sun-50':  '#F8F3E9',
+            'sun-100': '#F2ECDF',
+            'sun-150': '#EAE2D2',
+            'sun-200': '#E0D6C2',
+            'sun-300': '#D3C7B0',
+            'sun-400': '#C2B498',
+            'sun-500': '#1C6B45',
+            'sun-600': '#857C69',
+            'sun-700': '#534B3C',
+            'sun-800': '#3A352B',
+            'sun-900': '#211C15',
+            // brand + categorical accents
+            'forest':      '#1C6B45',
+            'forestdeep':  '#134C32',
+            'coral':       '#F4623A',
+            'marigold':    '#F2A93B',
+            'sky':         '#4F9CE8',
+            'violet':      '#9B6FD4',
+            'pink':        '#F07B92',
+            'cream':       '#F8F3E9',
+            'ink':         '#211C15',
           },
           fontFamily: {
             headline: ['Outfit', 'sans-serif'],
@@ -79,17 +89,27 @@
   </script>
   <style>
     :root {
-      --sun-50:  #FFFDF5;
-      --sun-100: #FFF9E8;
-      --sun-150: #FFF3D4;
-      --sun-200: #FFE4A0;
-      --sun-300: #FBDB8A;
-      --sun-400: #FFDC7C;
-      --sun-500: #E6B635;
-      --sun-600: #C3A040;
-      --sun-700: #B08E30;
-      --sun-800: #4A4237;
-      --sun-900: #2A2519;
+      --sun-50:  #F8F3E9;
+      --sun-100: #F2ECDF;
+      --sun-150: #EAE2D2;
+      --sun-200: #E0D6C2;
+      --sun-300: #D3C7B0;
+      --sun-400: #C2B498;
+      --sun-500: #1C6B45;
+      --sun-600: #857C69;
+      --sun-700: #534B3C;
+      --sun-800: #3A352B;
+      --sun-900: #211C15;
+      --cream:       #F8F3E9;
+      --ink:         #211C15;
+      --forest:      #1C6B45;
+      --forest-deep: #134C32;
+      --coral:       #F4623A;
+      --marigold:    #F2A93B;
+      --sky:         #4F9CE8;
+      --violet:      #9B6FD4;
+      --pink:        #F07B92;
+      --line:        rgba(33,28,21,0.10);
     }
 
     ::selection { background: var(--sun-400); color: var(--sun-900); }
@@ -101,66 +121,18 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--sun-50);
       color: var(--sun-900);
       overflow-x: hidden;
-      cursor: none;
+      background-color: var(--cream);
     }
 
     h1, h2, h3, h4, .font-headline { font-family: 'Outfit', sans-serif; }
 
-    /* ========== GRADIENT BACKGROUNDS ========== */
-    .bg-gradient-hero {
-      background:
-        radial-gradient(ellipse 900px 800px at 8% 80%, rgba(230,182,53,0.7) 0%, transparent 55%),
-        radial-gradient(ellipse 700px 600px at 85% 15%, rgba(255,220,124,0.6) 0%, transparent 50%),
-        radial-gradient(ellipse 500px 400px at 45% 50%, rgba(195,160,64,0.4) 0%, transparent 60%),
-        radial-gradient(ellipse 500px 400px at 70% 75%, rgba(255,220,124,0.45) 0%, transparent 55%),
-        linear-gradient(180deg, var(--sun-50) 0%, var(--sun-100) 100%);
-    }
-    .bg-gradient-warm {
-      background:
-        radial-gradient(ellipse 800px 600px at 80% 20%, rgba(230,182,53,0.6) 0%, transparent 50%),
-        radial-gradient(ellipse 700px 500px at 10% 70%, rgba(255,220,124,0.55) 0%, transparent 50%),
-        radial-gradient(ellipse 500px 400px at 50% 90%, rgba(195,160,64,0.4) 0%, transparent 60%),
-        radial-gradient(ellipse 600px 350px at 65% 5%, rgba(255,220,124,0.35) 0%, transparent 55%),
-        linear-gradient(180deg, var(--sun-100) 0%, var(--sun-150) 100%);
-    }
-    .bg-gradient-soft {
-      background:
-        radial-gradient(ellipse 750px 550px at 20% 30%, rgba(255,220,124,0.3) 0%, transparent 50%),
-        radial-gradient(ellipse 650px 450px at 80% 60%, rgba(230,182,53,0.25) 0%, transparent 50%),
-        linear-gradient(180deg, var(--sun-150) 0%, var(--sun-200) 50%, var(--sun-150) 100%);
-    }
-    .bg-gradient-dark {
-      background:
-        radial-gradient(ellipse 800px 600px at 15% 75%, rgba(230,182,53,0.6) 0%, transparent 50%),
-        radial-gradient(ellipse 650px 500px at 85% 15%, rgba(255,220,124,0.45) 0%, transparent 50%),
-        radial-gradient(ellipse 500px 400px at 50% 45%, rgba(195,160,64,0.35) 0%, transparent 60%),
-        linear-gradient(135deg, #7A6010 0%, #8B6D14 40%, #7A6010 100%);
-    }
-
-    /* ========== CURSOR GRADIENT BLOBS ========== */
-    .cursor-blob {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9990;
-      filter: blur(50px);
-      mix-blend-mode: multiply;
-    }
-    #cursor-glow {
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(200,160,40,0.35) 0%, rgba(180,140,30,0.15) 40%, transparent 70%);
-    }
-    #cursor-glow-2 {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(190,150,35,0.3) 0%, rgba(170,130,25,0.1) 40%, transparent 70%);
-    }
-    #cursor-glow-3 {
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(180,140,30,0.4) 0%, transparent 65%);
-    }
+    /* every section sits on one calm cream canvas */
+    .bg-gradient-hero,
+    .bg-gradient-warm,
+    .bg-gradient-soft,
+    .bg-gradient-dark { background: transparent; }
 
     /* ========== GRAIN ========== */
     .grain { position: relative; isolation: isolate; }
@@ -170,7 +142,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 1;
-      opacity: 0.3;
+      opacity: 0.16;
       mix-blend-mode: multiply;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
       background-size: 256px 256px;
@@ -178,51 +150,45 @@
     }
     .grain-light::after {
       mix-blend-mode: soft-light;
-      opacity: 0.2;
+      opacity: 0.12;
     }
 
-    /* ========== CURSOR ========== */
-    #cursor-dot {
-      position: fixed;
-      width: 8px;
-      height: 8px;
-      background: var(--sun-800);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
-      opacity: 0.6;
-    }
-    #cursor-dot.hovering {
-      width: 40px;
-      height: 40px;
-      opacity: 0.08;
-      background: var(--sun-700);
-    }
-
-    /* ========== FOOTSTEPS ========== */
+    /* ========== FOOTSTEPS (cursor trail) ========== */
     .footstep {
-      position: fixed;
-      pointer-events: none;
-      z-index: 9997;
-      opacity: 0;
-      animation: stepAppear 3s ease-out forwards;
+      position: fixed; pointer-events: none; z-index: 30;
+      opacity: 0; animation: stepAppear 2.6s ease-out forwards;
     }
-    .footstep-mark {
-      position: absolute;
-      border-radius: 50%;
-      background: var(--sun-800);
-    }
+    .footstep-mark { position: absolute; border-radius: 50%; background: var(--forest); }
     .footstep .ball { width: 7px; height: 10px; top: 0; left: 0; }
     .footstep .heel { width: 5px; height: 6px; top: 12px; left: 1px; }
-
     @keyframes stepAppear {
-      0%   { opacity: 0; }
-      8%   { opacity: 0.45; }
-      40%  { opacity: 0.3; }
-      100% { opacity: 0; }
+      0% { opacity: 0; } 10% { opacity: 0.4; } 45% { opacity: 0.28; } 100% { opacity: 0; }
     }
+
+    /* ========== STEPS COUNTER ========== */
+    .steps-pill {
+      position: fixed; bottom: 24px; right: 24px; z-index: 40;
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 24px 12px 14px; border-radius: 9999px;
+      background: rgba(248,243,233,0.85); backdrop-filter: blur(14px);
+      border: 1px solid rgba(33,28,21,0.10); box-shadow: 0 10px 28px rgba(33,28,21,0.12);
+    }
+    .steps-pill .ic {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(28,107,69,0.14); color: var(--forest); flex-shrink: 0;
+    }
+    .steps-pill .ic .material-symbols-outlined { font-size: 19px; }
+    .steps-pill .meta { display: flex; flex-direction: column; gap: 3px; line-height: 1; }
+    .steps-pill .k { font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sun-600); }
+    .steps-pill .v { font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 800; color: var(--sun-900); }
+    @media (max-width: 640px) { .steps-pill { bottom: 16px; right: 16px; padding: 10px 18px 10px 11px; gap: 11px; } }
+
+    /* ========== DECOR DOTS ========== */
+    .dot-deco { position: absolute; border-radius: 50%; z-index: 0; pointer-events: none;
+      animation: floaty var(--fd, 7s) ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    @media (prefers-reduced-motion: reduce) { .dot-deco, .footstep { animation: none !important; } }
 
     /* ========== REVEALS ========== */
     .reveal-up {
@@ -275,8 +241,8 @@
     .exp-item { position: relative; }
     .exp-item::before {
       content: ''; position: absolute; left: 0; bottom: 0;
-      width: 0; height: 2px;
-      background: linear-gradient(90deg, var(--sun-400), var(--sun-300));
+      width: 0; height: 2.5px;
+      background: var(--forest);
       transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
     }
     .exp-item:hover::before { width: 100%; }
@@ -300,13 +266,21 @@
 
     /* ========== CASE STUDY CARDS ========== */
     .case-grid-card {
-      cursor: pointer;
-      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s ease;
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: transform 0.45s cubic-bezier(0.16,1,0.3,1), box-shadow 0.45s ease, border-color 0.3s ease;
+    }
+    .case-grid-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: var(--c, var(--forest));
     }
     .case-grid-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px rgba(33,28,21,0.13);
+      border-color: var(--c, var(--sun-900));
     }
+    .case-grid-card .case-cat { font-size: 12px; }
+    .case-cat { color: var(--c); }
+    .case-go { color: var(--c); }
     .img-placeholder {
       background: linear-gradient(135deg, var(--sun-200) 0%, var(--sun-300) 100%);
       display: flex; align-items: center; justify-content: center;
@@ -385,43 +359,102 @@
       .story-nav { display: none; }
     }
 
-    /* ========== CHIP ========== */
+    /* ========== CHIPS (colour-mixed tag system) ========== */
     .chip {
       display: inline-block;
-      padding: 6px 14px;
-      font-size: 11px;
+      padding: 7px 15px;
+      font-size: 12px;
       font-family: 'Outfit', sans-serif;
-      letter-spacing: 0.05em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
       border-radius: 9999px;
     }
+    .chip-coral    { background: rgba(244,98,58,0.12);  color: #BE3818; }
+    .chip-forest   { background: rgba(28,107,69,0.13);  color: #134C32; }
+    .chip-marigold { background: rgba(242,169,59,0.18); color: #946011; }
+    .chip-sky      { background: rgba(79,156,232,0.15); color: #2A66AC; }
+    .chip-violet   { background: rgba(155,111,212,0.15);color: #69409F; }
+    .chip-pink     { background: rgba(240,123,146,0.15);color: #B23A52; }
+
+    /* ========== SECTION EYEBROW ========== */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ''; width: 28px; height: 3px; border-radius: 2px; background: currentColor; }
+    .eyebrow.no-line::before { display: none; }
 
     /* ========== MISC ========== */
     .load-hidden { opacity: 0; transform: translateY(30px); }
-    .load-nav { opacity: 0; transform: translateY(-20px); }
+    .load-nav { opacity: 0; transform: translateY(-12px); }
     @keyframes loadIn { to { opacity: 1; transform: translateY(0); } }
-
-    .waypoint { display: inline-flex; align-items: center; gap: 10px; }
-    .waypoint-marker { width: 6px; height: 6px; border-radius: 50%; background: var(--sun-500); opacity: 0.5; }
 
     .step-label {
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
       letter-spacing: 0.5em;
       text-transform: uppercase;
-      opacity: 0.25;
+      opacity: 0.7;
     }
 
-    nav { transition: padding 0.4s ease, background 0.4s ease; }
-    nav.scrolled { padding-top: 0.5rem; padding-bottom: 0.5rem; background: rgba(255,253,245,0.9); backdrop-filter: blur(20px); }
+    /* ========== STICKY HEADER ========== */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px clamp(20px, 5vw, 64px);
+      border-bottom: 1px solid transparent;
+      transition: padding 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+    }
+    .site-header.scrolled {
+      padding-top: 12px; padding-bottom: 12px;
+      background: rgba(248,243,233,0.82); backdrop-filter: blur(16px);
+      border-bottom-color: rgba(33,28,21,0.08);
+    }
+    .site-header .logo {
+      font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 16px;
+      letter-spacing: -0.01em; color: var(--sun-900);
+      display: inline-flex; align-items: center; gap: 9px;
+    }
+    .site-header .logo .logo-ic { font-size: 19px; color: var(--coral); flex-shrink: 0; }
+    .site-header .links { display: flex; align-items: center; gap: 4px; }
+    .site-header .links a {
+      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500;
+      color: var(--sun-700); padding: 8px 15px; border-radius: 9999px;
+      transition: color 0.25s ease, background 0.25s ease;
+    }
+    .site-header .links a:hover { color: var(--sun-900); background: rgba(33,28,21,0.05); }
+    .site-header .links a.active { color: var(--forest); font-weight: 600; }
+    .header-cta {
+      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600;
+      background: var(--ink); color: var(--cream); padding: 10px 20px; border-radius: 9999px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .header-cta:hover { background: var(--forest); transform: translateY(-1px); }
+
+    .menu-toggle {
+      display: none; width: 44px; height: 44px; border-radius: 12px;
+      align-items: center; justify-content: center; color: var(--sun-900);
+    }
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 55;
+      background: rgba(248,243,233,0.98); backdrop-filter: blur(20px);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+      opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: auto; }
+    .mobile-menu a { font-family: 'Outfit', sans-serif; font-size: 30px; font-weight: 700; color: var(--sun-900); padding: 8px; }
+    .mobile-menu a.active { color: var(--forest); }
+    .mobile-menu .mm-cta { margin-top: 18px; font-size: 16px; background: var(--ink); color: var(--cream); padding: 14px 30px; border-radius: 9999px; }
+
+    @media (max-width: 860px) {
+      .site-header .links, .header-cta { display: none; }
+      .menu-toggle { display: flex; }
+    }
 
     html { scroll-behavior: smooth; }
+    body { padding-top: 0; }
 
-    @media (max-width: 768px) {
-      body { cursor: auto; }
-      #cursor-dot { display: none !important; }
-      .footstep { display: none !important; }
-      .cursor-blob { display: none !important; }
-    }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
@@ -429,103 +462,130 @@
 </head>
 <body>
 
-  <div id="cursor-dot"></div>
-  <div class="cursor-blob" id="cursor-glow"></div>
-  <div class="cursor-blob" id="cursor-glow-2"></div>
-  <div class="cursor-blob" id="cursor-glow-3"></div>
+  <!-- HEADER -->
+  <header class="site-header load-nav" style="animation: loadIn 0.6s 0.1s cubic-bezier(0.16,1,0.3,1) forwards">
+    <a href="#" class="logo"><span class="material-symbols-outlined logo-ic">footprint</span>Valentina Alfonso</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#library">Library</a>
+    </nav>
+    <a href="#contact" class="header-cta">Say hi</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+  </header>
 
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-5 bg-sun-50/60 backdrop-blur-xl border-b border-sun-300/15 load-nav" style="animation: loadIn 0.6s 0.1s cubic-bezier(0.16,1,0.3,1) forwards">
-    <a href="#" class="font-headline text-base font-bold tracking-tight text-sun-900 hover:tracking-wide transition-all duration-700 uppercase">Valentina Alfonso</a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="font-body text-xs font-medium text-sun-800/60 hover:text-sun-900 transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-sun-500 after:transition-all after:duration-400 hover:after:w-full" href="#about">About</a>
-      <a class="font-body text-xs font-medium text-sun-800/60 hover:text-sun-900 transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-sun-500 after:transition-all after:duration-400 hover:after:w-full" href="#experience">Experience</a>
-      <a class="font-body text-xs font-medium text-sun-800/60 hover:text-sun-900 transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-sun-500 after:transition-all after:duration-400 hover:after:w-full" href="#case-studies">Case Studies</a>
-      <a class="font-body text-xs font-medium text-sun-800/60 hover:text-sun-900 transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-sun-500 after:transition-all after:duration-400 hover:after:w-full" href="#library">Library</a>
-    </div>
-    <a class="magnetic-btn bg-sun-900 text-sun-200 px-6 py-2.5 font-headline font-semibold text-xs tracking-widest uppercase rounded-full hover:bg-sun-700 hover:text-sun-100 transition-colors duration-300 active:scale-95" href="#contact">Say hi</a>
-  </nav>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#library">Library</a>
+    <a href="#contact" class="mm-cta">Say hi</a>
+  </div>
 
   <main>
 
-    <!-- 001 HERO -->
-    <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden bg-gradient-hero grain">
+    <!-- HERO -->
+    <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden bg-gradient-hero">
 
-      <div class="max-w-5xl mx-auto py-32 md:py-44 relative z-10">
-        <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] mb-10 text-sun-900" id="hero-heading" data-text="Drawn to how people move through the things we build.">
+      <div class="max-w-5xl mx-auto w-full py-36 md:py-44 relative z-10">
+        <div class="load-hidden mb-8" style="animation: loadIn 0.7s 0.3s cubic-bezier(0.16,1,0.3,1) forwards">
+          <span class="eyebrow no-line text-coral">Product Manager &middot; Buenos Aires</span>
+        </div>
+
+        <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-8 text-sun-900 max-w-4xl" id="hero-heading">
+          Drawn to how people <span class="text-coral">move</span> through the things we <span class="text-forest">build.</span>
         </h1>
 
         <div class="load-hidden" style="animation: loadIn 0.7s 0.5s cubic-bezier(0.16,1,0.3,1) forwards">
-          <p class="font-body text-xl md:text-2xl text-sun-800/60 max-w-3xl leading-relaxed font-light">
+          <p class="font-body text-xl md:text-2xl text-sun-800/70 max-w-2xl leading-relaxed font-light">
             Product Manager with an industrial design foundation.<br />Now working on AI-driven products.
           </p>
         </div>
 
-        <div class="load-hidden mt-14 flex flex-wrap items-center gap-6" style="animation: loadIn 0.7s 0.7s cubic-bezier(0.16,1,0.3,1) forwards">
-          <a href="#about" class="magnetic-btn inline-flex items-center gap-3 bg-sun-900 text-sun-200 px-8 py-4 font-headline text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-sun-700 hover:text-sun-100 hover:gap-5 transition-all duration-400">
+        <div class="load-hidden mt-12 flex flex-wrap items-center gap-4" style="animation: loadIn 0.7s 0.7s cubic-bezier(0.16,1,0.3,1) forwards">
+          <a href="#about" class="magnetic-btn inline-flex items-center gap-2.5 bg-coral text-white px-7 py-3.5 font-headline text-sm font-semibold rounded-full hover:gap-3.5 transition-all duration-300 shadow-md shadow-coral/25">
             Take a walk <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </a>
-        </div>
-
-        <div class="load-hidden mt-16" style="animation: loadIn 0.7s 0.9s cubic-bezier(0.16,1,0.3,1) forwards">
-          <span class="font-headline text-xs uppercase tracking-[0.4em] text-sun-800/70">Buenos Aires &middot; Industrial Design, UBA</span>
+          <a href="#contact" class="magnetic-btn inline-flex items-center gap-2 text-sun-900 px-6 py-3.5 font-headline text-sm font-semibold rounded-full border border-sun-900/20 hover:border-sun-900/50 transition-all duration-300">
+            Get in touch
+          </a>
         </div>
       </div>
+
     </section>
 
+
     <!-- 002 ABOUT -->
-    <section class="relative overflow-hidden grain grain-light py-32 md:py-44 px-6 md:px-16 bg-gradient-dark text-sun-100" id="about">
+    <section class="relative leg overflow-hidden grain grain-light py-32 md:py-44 px-6 md:px-16 bg-gradient-dark text-sun-900" id="about">
 
       <div class="max-w-5xl mx-auto relative z-10">
         <div class="reveal-left mb-12">
-          <span class="step-label text-sun-300">001 / 005</span>
-          <h2 class="font-headline text-5xl md:text-7xl font-extrabold text-sun-100 tracking-tight leading-[0.9] mt-4">A bit about me</h2>
+          <span class="eyebrow text-forest mb-5">About</span>
+          <h2 class="font-headline text-5xl md:text-7xl font-extrabold text-sun-900 tracking-tight leading-[0.9] mt-4">A bit about <span class="text-forest">me</span></h2>
         </div>
 
         <div class="reveal-right space-y-8 mb-16">
-          <p class="font-body text-xl md:text-2xl font-light text-sun-100/70 leading-[1.6]">
+          <p class="font-body text-xl md:text-2xl font-light text-sun-800/70 leading-[1.6]">
             Industrial designer by training. Project manager by accident. Product manager by choice.
           </p>
-          <p class="font-body text-lg md:text-xl text-sun-100/55 leading-[1.7]">
+          <p class="font-body text-lg md:text-xl text-sun-800/60 leading-[1.7]">
             What I care about most is the people and the process of making something together. There's something about taking a shared, half-formed idea and turning it into something real that never stops being exciting to me.
           </p>
-          <p class="font-body text-lg md:text-xl text-sun-100/55 leading-[1.7]">
+          <p class="font-body text-lg md:text-xl text-sun-800/60 leading-[1.7]">
             AI has become a genuine part of that. It gives more room to explore, makes iteration faster, and lets the creative energy go further.
           </p>
         </div>
 
-        <!-- Skill chips -->
-        <div class="reveal-up flex flex-wrap gap-3">
-          <span class="chip bg-sun-500/10 text-sun-200/70">Industrial Design, UBA</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Design Thinking</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Stakeholder Management</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Product Coordination</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Agile Methodologies</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">User Research</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Cross-functional Leadership</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Roadmapping</span>
-          <span class="chip bg-sun-500/15 text-sun-200/85">AI-powered Product Design</span>
-          <span class="chip bg-sun-500/10 text-sun-200/70">Spanish &middot; English &middot; French</span>
+        <!-- Skill chips (colour-mixed) -->
+        <div class="reveal-up flex flex-wrap gap-2.5">
+          <span class="chip chip-forest">Industrial Design, UBA</span>
+          <span class="chip chip-sky">Design Thinking</span>
+          <span class="chip chip-marigold">Stakeholder Management</span>
+          <span class="chip chip-violet">Product Coordination</span>
+          <span class="chip chip-coral">Agile Methodologies</span>
+          <span class="chip chip-pink">User Research</span>
+          <span class="chip chip-sky">Cross-functional Leadership</span>
+          <span class="chip chip-forest">Roadmapping</span>
+          <span class="chip chip-coral">AI-powered Product Design</span>
+          <span class="chip chip-marigold">Spanish &middot; English &middot; French</span>
         </div>
       </div>
     </section>
 
     <!-- 003 EXPERIENCE -->
-    <section class="relative py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-warm grain" id="experience">
+    <section class="relative leg py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-warm grain" id="experience">
 
       <div class="max-w-5xl mx-auto relative z-10">
         <div class="reveal-left mb-12">
-          <span class="step-label text-sun-800">002 / 005</span>
-          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.9] text-sun-900 mt-4">The terrain I've covered</h2>
-          <p class="font-body text-base text-sun-800/50 mt-4">The map, not the story. For the stories, see <a href="#case-studies" class="text-sun-500 hover:text-sun-400 underline underline-offset-4 decoration-sun-400/30 transition-all">Case Studies</a>.</p>
+          <span class="eyebrow text-marigold mb-5">Experience</span>
+          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.9] text-sun-900 mt-4">The terrain I've <span class="text-marigold">covered</span></h2>
+          <p class="font-body text-base text-sun-800/55 mt-4">The map, not the story. For the stories, see <a href="#case-studies" class="text-forest font-medium underline underline-offset-4 decoration-forest/30 hover:decoration-forest transition-all">Case Studies</a>.</p>
         </div>
 
         <div class="space-y-0 mt-16">
-          <!-- Scalestack -->
+          <!-- Nimble Gravity -->
           <div class="exp-item relative group py-8 border-b border-sun-800/6 reveal-up">
             <div class="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-1">
+              <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900">Nimble Gravity</h3>
+              <span class="font-headline text-[11px] text-sun-500 tracking-widest uppercase shrink-0">New</span>
+            </div>
+            <div class="space-y-2 mt-4 font-body text-sun-800/60">
+              <div>
+                <div class="flex items-baseline gap-3">
+                  <span class="w-1 h-1 rounded-full bg-sun-500/40 shrink-0 mt-2"></span>
+                  <p><span class="text-sun-900 font-medium">Product Manager</span> &middot; Jun 2026 &ndash; Present</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scalestack -->
+          <div class="exp-item relative group py-8 border-b border-sun-800/6 reveal-up" style="transition-delay: 40ms;">
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-1">
               <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900">Scalestack</h3>
-              <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">1 year</span>
+              <span class="font-headline text-[11px] text-sun-800/50 tracking-widest uppercase shrink-0">1 yr 2 mo</span>
             </div>
             <div class="space-y-2 mt-4 font-body text-sun-800/60">
               <div class="role-row" onclick="this.classList.toggle('open')">
@@ -656,59 +716,59 @@
     </section>
 
     <!-- 004 CASE STUDIES -->
-    <section class="relative py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-dark grain grain-light text-sun-100" id="case-studies">
+    <section class="relative leg py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-dark grain grain-light text-sun-900" id="case-studies">
 
       <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-baseline mb-12 gap-6 relative z-10">
         <div class="reveal-up">
-          <span class="step-label text-sun-300">003 / 005</span>
-          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-sun-100 mt-4">Case Studies</h2>
-          <p class="font-body text-base text-sun-100/55 mt-4 max-w-2xl">Not job descriptions. The actual stories, the messiness, the tradeoffs, what held and what didn't.</p>
+          <span class="eyebrow text-sky mb-5">Selected work</span>
+          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-sun-900 mt-4">Case <span class="text-sky">Studies</span></h2>
+          <p class="font-body text-base text-sun-800/60 mt-4 max-w-2xl">Not job descriptions. The actual stories, the messiness, the tradeoffs, what held and what didn't.</p>
         </div>
       </div>
 
       <!-- Card Grid -->
       <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10" id="case-grid">
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" role="button" tabindex="0" onclick="openCase(0)" onkeydown="if(event.key==='Enter')openCase(0)">
-          <span class="font-headline text-[11px] text-sun-800/40 tracking-[0.3em] uppercase">01 &middot; tekuoia</span>
+        <div class="case-grid-card bg-[#FCF9F1] border border-sun-900/8 rounded-3xl p-8 md:p-10 reveal-up" style="--c:#F4623A" role="button" tabindex="0" onclick="openCase(0)" onkeydown="if(event.key==='Enter')openCase(0)">
+          <span class="case-cat font-headline text-[11px] tracking-[0.2em] uppercase font-bold">01 &middot; tekuoia</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">When the product is the experience, not the content.</h3>
-          <p class="text-sun-800/50 font-body text-sm leading-relaxed">Four stakeholders, four definitions of success. The curriculum redesign worked because the stages made sense.</p>
-          <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
+          <p class="text-sun-800/55 font-body text-sm leading-relaxed">Four stakeholders, four definitions of success. The curriculum redesign worked because the stages made sense.</p>
+          <div class="case-go flex items-center gap-2 mt-6 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:100ms" role="button" tabindex="0" onclick="openCase(1)" onkeydown="if(event.key==='Enter')openCase(1)">
-          <span class="font-headline text-[11px] text-sun-800/40 tracking-[0.3em] uppercase">02 &middot; TECHO Argentina</span>
+        <div class="case-grid-card bg-[#FCF9F1] border border-sun-900/8 rounded-3xl p-8 md:p-10 reveal-up" style="--c:#F2A93B;transition-delay:100ms" role="button" tabindex="0" onclick="openCase(1)" onkeydown="if(event.key==='Enter')openCase(1)">
+          <span class="case-cat font-headline text-[11px] tracking-[0.2em] uppercase font-bold">02 &middot; TECHO Argentina</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">Organizing people vs. actually leading them.</h3>
-          <p class="text-sun-800/50 font-body text-sm leading-relaxed">What worked at 10 volunteers broke at 100. Structure, feedback loops, and trust.</p>
-          <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
+          <p class="text-sun-800/55 font-body text-sm leading-relaxed">What worked at 10 volunteers broke at 100. Structure, feedback loops, and trust.</p>
+          <div class="case-go flex items-center gap-2 mt-6 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:200ms" role="button" tabindex="0" onclick="openCase(2)" onkeydown="if(event.key==='Enter')openCase(2)">
-          <span class="font-headline text-[11px] text-sun-800/40 tracking-[0.3em] uppercase">03 &middot; Industrial Design</span>
+        <div class="case-grid-card bg-[#FCF9F1] border border-sun-900/8 rounded-3xl p-8 md:p-10 reveal-up" style="--c:#9B6FD4;transition-delay:200ms" role="button" tabindex="0" onclick="openCase(2)" onkeydown="if(event.key==='Enter')openCase(2)">
+          <span class="case-cat font-headline text-[11px] tracking-[0.2em] uppercase font-bold">03 &middot; Industrial Design</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">What iteration actually costs when it's physical.</h3>
-          <p class="text-sun-800/50 font-body text-sm leading-relaxed">Zamba: a nut harvester for small producers. Built, tested, failed, adjusted, repeated.</p>
-          <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
+          <p class="text-sun-800/55 font-body text-sm leading-relaxed">Zamba: a nut harvester for small producers. Built, tested, failed, adjusted, repeated.</p>
+          <div class="case-go flex items-center gap-2 mt-6 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
-        <div class="case-grid-card bg-sun-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 reveal-up" style="transition-delay:300ms" role="button" tabindex="0" onclick="openCase(3)" onkeydown="if(event.key==='Enter')openCase(3)">
-          <span class="font-headline text-[11px] text-sun-800/40 tracking-[0.3em] uppercase">04 &middot; Education</span>
+        <div class="case-grid-card bg-[#FCF9F1] border border-sun-900/8 rounded-3xl p-8 md:p-10 reveal-up" style="--c:#1C6B45;transition-delay:300ms" role="button" tabindex="0" onclick="openCase(3)" onkeydown="if(event.key==='Enter')openCase(3)">
+          <span class="case-cat font-headline text-[11px] tracking-[0.2em] uppercase font-bold">04 &middot; Education</span>
           <h3 class="text-2xl md:text-3xl font-extrabold font-headline tracking-tight text-sun-900 mt-3 mb-4">Designing for users who won't read the instructions.</h3>
-          <p class="text-sun-800/50 font-body text-sm leading-relaxed">Manos Felices: transparent soaps with hidden toys. A pandemic project for six-year-olds.</p>
-          <div class="flex items-center gap-2 mt-6 text-sun-500 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
+          <p class="text-sun-800/55 font-body text-sm leading-relaxed">Manos Felices: transparent soaps with hidden toys. A pandemic project for six-year-olds.</p>
+          <div class="case-go flex items-center gap-2 mt-6 font-headline text-xs font-semibold uppercase tracking-widest">Explore story <span class="material-symbols-outlined text-base">arrow_forward</span></div>
         </div>
       </div>
 
     </section>
 
     <!-- 005 LIBRARY -->
-    <section class="relative py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-soft grain" id="library">
+    <section class="relative leg py-32 md:py-44 px-6 md:px-16 overflow-hidden bg-gradient-soft grain" id="library">
       <div class="max-w-5xl mx-auto relative z-10">
         <div class="reveal-up mb-12">
-          <span class="step-label text-sun-800">004 / 005</span>
-          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-sun-900 mt-4">Things that stuck.</h2>
-          <p class="font-body text-base text-sun-800/50 mt-4 max-w-lg">What actually shaped how I think about products.</p>
+          <span class="eyebrow text-violet mb-5">Library</span>
+          <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-sun-900 mt-4">Things that <span class="text-violet">stuck.</span></h2>
+          <p class="font-body text-base text-sun-800/55 mt-4 max-w-lg">What actually shaped how I think about products.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16 relative z-10">
           <div class="space-y-8 reveal-up">
             <div class="flex items-center gap-3 pb-5 border-b border-sun-800/10">
-              <span class="material-symbols-outlined text-sun-800/50 text-2xl">menu_book</span>
+              <span class="material-symbols-outlined text-coral text-2xl">menu_book</span>
               <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-sun-900">Books</h3>
             </div>
             <ul class="space-y-8">
@@ -728,7 +788,7 @@
           </div>
           <div class="space-y-8 reveal-up" style="transition-delay: 150ms;">
             <div class="flex items-center gap-3 pb-5 border-b border-sun-800/10">
-              <span class="material-symbols-outlined text-sun-800/50 text-2xl">podcasts</span>
+              <span class="material-symbols-outlined text-marigold text-2xl">podcasts</span>
               <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-sun-900">Podcasts</h3>
             </div>
             <ul class="space-y-8">
@@ -754,7 +814,7 @@
           </div>
           <div class="space-y-8 reveal-up" style="transition-delay: 300ms;">
             <div class="flex items-center gap-3 pb-5 border-b border-sun-800/10">
-              <span class="material-symbols-outlined text-sun-800/50 text-2xl">article</span>
+              <span class="material-symbols-outlined text-sky text-2xl">article</span>
               <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-sun-900">Articles</h3>
             </div>
             <ul class="space-y-8">
@@ -777,43 +837,53 @@
     </section>
 
     <!-- 006 CONTACT -->
-    <section class="relative overflow-hidden grain grain-light bg-gradient-dark" id="contact">
+    <section class="relative leg overflow-hidden grain grain-light bg-gradient-dark" id="contact">
       <div class="py-32 md:py-44 px-6 md:px-16 relative z-10">
 
         <div class="max-w-5xl mx-auto">
           <div class="reveal-up">
-            <span class="step-label text-sun-300">005 / 005</span>
-            <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-[-0.04em] leading-[0.85] mb-10 text-sun-100 mt-4">Say hi.</h2>
+            <span class="eyebrow text-pink mb-5">Get in touch</span>
+            <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.9] mb-8 text-sun-900 mt-4">Say <span class="text-pink">hi.</span></h2>
           </div>
 
           <div class="reveal-up space-y-6 mb-12" style="transition-delay: 150ms;">
-            <p class="font-body text-xl md:text-2xl text-sun-100/65 leading-relaxed max-w-2xl">
+            <p class="font-body text-xl md:text-2xl text-sun-800/65 leading-relaxed max-w-2xl">
               Thanks for walking all the way through. If something here resonated, a project, a way of thinking, a problem you're working on, drop me a line.
             </p>
           </div>
 
-          <div class="reveal-up grid grid-cols-1 md:grid-cols-3 gap-6" style="transition-delay: 250ms;">
-            <a class="border border-sun-300/8 p-8 group hover:bg-sun-200 hover:text-sun-900 transition-all duration-500 rounded-2xl text-sun-100" href="mailto:tini.alfo@gmail.com">
-              <span class="font-headline text-[11px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">Email</span>
-              <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">tini.alfo@gmail.com</p>
+          <div class="reveal-up grid grid-cols-1 md:grid-cols-3 gap-5" style="transition-delay: 250ms;">
+            <a class="border border-sun-900/12 p-7 group rounded-2xl text-sun-900 transition-all duration-300 hover:-translate-y-1 hover:border-coral hover:shadow-xl hover:shadow-coral/10" href="mailto:tini.alfo@gmail.com">
+              <span class="font-headline text-[11px] uppercase tracking-[0.3em] text-coral block mb-4">Email</span>
+              <p class="font-headline text-lg font-bold group-hover:translate-x-1.5 transition-transform duration-300">tini.alfo@gmail.com</p>
             </a>
-            <a class="border border-sun-300/8 p-8 group hover:bg-sun-200 hover:text-sun-900 transition-all duration-500 rounded-2xl text-sun-100" href="https://wa.me/541167903326" target="_blank" rel="noopener noreferrer">
-              <span class="font-headline text-[11px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">WhatsApp</span>
-              <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">+54 11 6790 3326</p>
+            <a class="border border-sun-900/12 p-7 group rounded-2xl text-sun-900 transition-all duration-300 hover:-translate-y-1 hover:border-forest hover:shadow-xl hover:shadow-forest/10" href="https://wa.me/541167903326" target="_blank" rel="noopener noreferrer">
+              <span class="font-headline text-[11px] uppercase tracking-[0.3em] text-forest block mb-4">WhatsApp</span>
+              <p class="font-headline text-lg font-bold group-hover:translate-x-1.5 transition-transform duration-300">+54 11 6790 3326</p>
             </a>
-            <a class="border border-sun-300/8 p-8 group hover:bg-sun-200 hover:text-sun-900 transition-all duration-500 rounded-2xl text-sun-100" href="https://www.linkedin.com/in/valentina-alfonso-438a14166/" target="_blank" rel="noopener noreferrer">
-              <span class="font-headline text-[11px] uppercase tracking-[0.4em] text-sun-200/45 block mb-4 group-hover:text-sun-800/60 transition-colors">LinkedIn</span>
-              <p class="font-headline text-xl font-bold group-hover:translate-x-3 transition-transform duration-400">Valentina Alfonso</p>
+            <a class="border border-sun-900/12 p-7 group rounded-2xl text-sun-900 transition-all duration-300 hover:-translate-y-1 hover:border-sky hover:shadow-xl hover:shadow-sky/10" href="https://www.linkedin.com/in/valentina-alfonso-438a14166/" target="_blank" rel="noopener noreferrer">
+              <span class="font-headline text-[11px] uppercase tracking-[0.3em] text-sky block mb-4">LinkedIn</span>
+              <p class="font-headline text-lg font-bold group-hover:translate-x-1.5 transition-transform duration-300">Valentina Alfonso</p>
             </a>
           </div>
 
-          <div class="reveal-up mt-8" style="transition-delay: 350ms;">
-            <span class="font-body text-sm text-sun-100/40">Buenos Aires</span>
+          <div class="reveal-up mt-8 flex items-center gap-2 text-sun-600" style="transition-delay: 350ms;">
+            <span class="material-symbols-outlined text-base text-pink">location_on</span>
+            <span class="font-body text-sm">Buenos Aires</span>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- STEPS COUNTER -->
+  <div class="steps-pill load-hidden" id="steps-pill" style="animation: loadIn 0.6s 1.1s cubic-bezier(0.16,1,0.3,1) forwards">
+    <span class="ic"><span class="material-symbols-outlined">footprint</span></span>
+    <span class="meta">
+      <span class="k">Steps taken</span>
+      <span class="v" id="step-count">0</span>
+    </span>
+  </div>
 
   <!-- CASE STUDY OVERLAY -->
   <div id="case-overlay">
@@ -825,88 +895,78 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-gradient-dark border-t border-sun-400/10">
-    <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-10 max-w-7xl mx-auto">
-      <div class="font-headline text-sm font-medium uppercase text-sun-100/70 mb-4 md:mb-0 tracking-wide">Valentina Alfonso &middot; Product Manager &middot; Buenos Aires, Argentina</div>
-      <div class="flex gap-8">
-        <a class="font-body text-xs tracking-wide text-sun-200/40 hover:text-sun-200 transition-colors duration-300" href="#">Privacy Policy</a>
-        <a class="font-body text-xs tracking-wide text-sun-200/40 hover:text-sun-200 transition-colors duration-300" href="#">Terms of Service</a>
-      </div>
+  <footer class="border-t border-sun-900/10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 px-6 md:px-16 py-10 max-w-6xl mx-auto">
+      <a href="#" class="logo font-headline font-extrabold text-sm flex items-center gap-2.5 text-sun-900"><span class="material-symbols-outlined text-coral" style="font-size:18px">footprint</span>Valentina Alfonso</a>
+      <div class="font-body text-xs text-sun-600">&copy; 2026 &middot; Product Manager &middot; Buenos Aires, Argentina</div>
     </div>
   </footer>
 
-  <!-- WIDGETS -->
-  <div class="fixed bottom-8 right-8 z-40 load-hidden" id="step-counter" style="animation: loadIn 0.6s 1.2s cubic-bezier(0.16,1,0.3,1) forwards">
-    <div class="p-4 shadow-2xl border border-sun-300/15 flex flex-col gap-1 rounded-2xl backdrop-blur-xl" style="background: rgba(42,37,25,0.92);">
-      <span class="font-headline text-[11px] uppercase text-sun-200/70 tracking-widest">Steps taken</span>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-outlined text-sun-300/70 text-sm">footprint</span>
-        <span class="font-headline text-lg font-bold text-sun-100" id="step-count">0</span>
-      </div>
-    </div>
-  </div>
-
   <!-- JS -->
   <script>
-    // CURSOR
-    const cursorDot = document.getElementById('cursor-dot');
-    let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
-    let dotX = mouseX, dotY = mouseY;
-    let lastStepX = 0, lastStepY = 0, stepSide = 0, stepCount = 0;
-    const stepCountEl = document.getElementById('step-count');
-    const STEP_DIST = 80, prints = [], MAX_PRINTS = 20;
+    // FOOTSTEPS following the cursor + steps counter
+    (function () {
+      const stepCountEl = document.getElementById('step-count');
+      if (window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
+      let mouseX = innerWidth / 2, mouseY = innerHeight / 2;
+      let lastX = mouseX, lastY = mouseY, side = 0, steps = 0;
+      const STEP_DIST = 90, MAX = 16, prints = [];
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        const dx = mouseX - lastX, dy = mouseY - lastY;
+        if (Math.sqrt(dx * dx + dy * dy) > STEP_DIST) { place(mouseX, mouseY, dx, dy); lastX = mouseX; lastY = mouseY; }
+      });
+      function place(x, y, dx, dy) {
+        const angle = Math.atan2(dy, dx), perp = angle - Math.PI / 2;
+        const off = side === 0 ? -6 : 6;
+        const sx = x + Math.cos(perp) * off, sy = y + Math.sin(perp) * off;
+        const step = document.createElement('div');
+        step.className = 'footstep';
+        step.style.left = sx + 'px'; step.style.top = sy + 'px';
+        step.style.transform = `translate(-50%,-50%) rotate(${angle * 180 / Math.PI + 90}deg)`;
+        const ball = document.createElement('div'); ball.className = 'footstep-mark ball';
+        const heel = document.createElement('div'); heel.className = 'footstep-mark heel';
+        if (side === 1) { ball.style.left = '2px'; heel.style.left = '3px'; }
+        step.append(ball, heel);
+        document.body.appendChild(step); prints.push(step);
+        if (prints.length > MAX) { const o = prints.shift(); o.remove(); }
+        setTimeout(() => { step.remove(); const i = prints.indexOf(step); if (i > -1) prints.splice(i, 1); }, 2600);
+        side = 1 - side; steps++;
+        if (stepCountEl) stepCountEl.textContent = steps;
+      }
+    })();
 
-    const glow1 = document.getElementById('cursor-glow');
-    const glow2 = document.getElementById('cursor-glow-2');
-    const glow3 = document.getElementById('cursor-glow-3');
-    let g1x=0,g1y=0, g2x=0,g2y=0, g3x=0,g3y=0;
+    // HEADER — condense on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
 
-    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-
-    function animationLoop() {
-      // Glow blobs
-      g1x += (mouseX - g1x) * 0.08; g1y += (mouseY - g1y) * 0.08;
-      g2x += (mouseX - g2x) * 0.14; g2y += (mouseY - g2y) * 0.14;
-      g3x += (mouseX - g3x) * 0.22; g3y += (mouseY - g3y) * 0.22;
-      glow1.style.left = g1x - 300 + 'px'; glow1.style.top = g1y - 300 + 'px';
-      glow2.style.left = g2x - 200 + 'px'; glow2.style.top = g2y - 200 + 'px';
-      glow3.style.left = g3x - 125 + 'px'; glow3.style.top = g3y - 125 + 'px';
-
-      // Cursor dot
-      dotX += (mouseX - dotX) * 0.28;
-      dotY += (mouseY - dotY) * 0.28;
-      cursorDot.style.left = dotX + 'px';
-      cursorDot.style.top = dotY + 'px';
-      const dx = dotX - lastStepX, dy = dotY - lastStepY;
-      if (Math.sqrt(dx*dx + dy*dy) > STEP_DIST) { placeStep(dotX, dotY, dx, dy); lastStepX = dotX; lastStepY = dotY; }
-
-      requestAnimationFrame(animationLoop);
+    // MOBILE MENU
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle) {
+      const closeMenu = () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; menuToggle.querySelector('.material-symbols-outlined').textContent = 'menu'; };
+      menuToggle.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('open');
+        document.body.style.overflow = open ? 'hidden' : '';
+        menuToggle.querySelector('.material-symbols-outlined').textContent = open ? 'close' : 'menu';
+      });
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     }
 
-    function placeStep(x, y, dx, dy) {
-      const angle = Math.atan2(dy, dx), perpAngle = angle - Math.PI/2;
-      const offset = stepSide === 0 ? -6 : 6;
-      const sx = x + Math.cos(perpAngle)*offset, sy = y + Math.sin(perpAngle)*offset;
-      const deg = angle * (180/Math.PI) + 90;
-      const step = document.createElement('div');
-      step.className = 'footstep';
-      step.style.left = sx+'px'; step.style.top = sy+'px';
-      step.style.transform = `translate(-50%,-50%) rotate(${deg}deg)`;
-      const ball = document.createElement('div'); ball.className = 'footstep-mark ball'; step.appendChild(ball);
-      const heel = document.createElement('div'); heel.className = 'footstep-mark heel'; step.appendChild(heel);
-      if (stepSide === 1) { ball.style.left = '2px'; heel.style.left = '3px'; }
-      document.body.appendChild(step); prints.push(step);
-      if (prints.length > MAX_PRINTS) { const old = prints.shift(); if (old.parentNode) old.parentNode.removeChild(old); }
-      setTimeout(() => { if (step.parentNode) step.parentNode.removeChild(step); const idx = prints.indexOf(step); if (idx > -1) prints.splice(idx, 1); }, 3000);
-      stepSide = 1 - stepSide; stepCount++;
-      if (stepCountEl) stepCountEl.textContent = stepCount;
-    }
-
-    animationLoop(); lastStepX = mouseX; lastStepY = mouseY;
-
-    document.querySelectorAll('a, button, .tilt-card, .group, .magnetic-btn, .case-study').forEach(el => {
-      el.addEventListener('mouseenter', () => cursorDot.classList.add('hovering'));
-      el.addEventListener('mouseleave', () => cursorDot.classList.remove('hovering'));
+    // ACTIVE NAV LINK
+    const navLinks = document.querySelectorAll('.site-header .links a, .mobile-menu a');
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const id = '#' + en.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    ['about','experience','case-studies','library','contact'].forEach(id => {
+      const el = document.getElementById(id); if (el) navObserver.observe(el);
     });
 
     // CASE STUDY HORIZONTAL STORY
@@ -1011,7 +1071,6 @@
       overlay.classList.add('active');
       document.body.style.overflow = 'hidden';
       storyScroll.scrollLeft = 0;
-      stepCount++; if (stepCountEl) stepCountEl.textContent = stepCount;
     }
 
     function closeCase() {
@@ -1039,9 +1098,6 @@
       if (e.key === 'ArrowRight') storyNext();
       if (e.key === 'ArrowLeft') storyPrev();
     });
-
-    // Set hero text
-    document.getElementById('hero-heading').textContent = document.getElementById('hero-heading').dataset.text;
 
     // REVEALS
     const revealObserver = new IntersectionObserver(entries => {
@@ -1080,25 +1136,6 @@
       btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
     });
 
-    // NAV
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
-
-    // MOBILE SCROLL STEPS
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    if (isMobile) {
-      let lastScrollForSteps = 0;
-      const SCROLL_STEP_DIST = 120;
-      window.addEventListener('scroll', () => {
-        const scrolled = Math.abs(window.scrollY - lastScrollForSteps);
-        if (scrolled >= SCROLL_STEP_DIST) {
-          const newSteps = Math.floor(scrolled / SCROLL_STEP_DIST);
-          stepCount += newSteps;
-          if (stepCountEl) stepCountEl.textContent = stepCount;
-          lastScrollForSteps = window.scrollY;
-        }
-      }, { passive: true });
-    }
 
   </script>
 
